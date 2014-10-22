@@ -16,9 +16,10 @@ public class Pratica31 {
     private static final String meuNome = "Gabriel Rodrigues Garcia";
     private static final GregorianCalendar dataNascimento = new GregorianCalendar(1990,10,20);
     private static final GregorianCalendar today = new GregorianCalendar();
- 
+    private static final Date inicio = new Date();
+    
     public static void main(String[] args) {
-        Date inicio = new Date();
+        double t1 = inicio.getTime();
         System.out.println("item 4: "+ meuNome.toUpperCase());
         System.out.println("item 5: "+ meuNome.substring(18)+", "+
                 meuNome.toUpperCase().charAt(0)+"."+
@@ -27,7 +28,8 @@ public class Pratica31 {
                 dataNascimento.getTimeInMillis())/
                 (60*60*24*1000)+" dias");
         Date fim = new Date();
-        System.out.println("item 7: "+(fim.getTime() - inicio.getTime())+" milisegundos");
+        double t2 = fim.getTime();
+        System.out.println("item 7: "+(t2-t1)+" milisegundos");
     }
 }
 
