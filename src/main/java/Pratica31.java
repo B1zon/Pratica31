@@ -20,16 +20,16 @@ public class Pratica31 {
     
     public static void main(String[] args) {
         double t1 = inicio.getTime();
-        System.out.println("item 4: "+ meuNome.toUpperCase());
-        System.out.println("item 5: "+ meuNome.substring(18)+", "+
+        String iniciais = meuNome.substring(18)+", "+
                 meuNome.toUpperCase().charAt(0)+"."+
-                meuNome.toUpperCase().charAt(8)+".");
-        System.out.println("item 6: "+(today.getTimeInMillis() - 
-                dataNascimento.getTimeInMillis())/
-                (60*60*24*1000)+" dias");
+                meuNome.toUpperCase().charAt(8)+".";
+        long dias = (today.getTimeInMillis() - dataNascimento.getTimeInMillis())/(60*60*24*1000);
+        System.out.println("item 5: "+ meuNome.toUpperCase());
+        System.out.println("item 6: "+ iniciais);
+        System.out.println("item 7: "+ dias +" dias");
         Date fim = new Date();
         double t2 = fim.getTime();
-        System.out.println("item 7: "+(t2-t1)+" milisegundos");
+        System.out.println("item 8: "+(t2-t1)+" milisegundos");
     }
 }
 
